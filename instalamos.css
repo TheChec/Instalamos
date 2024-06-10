@@ -12,12 +12,12 @@
 }
 @keyframes scroll2 {
     0% {
-        -webkit-transform: translateX(calc((200px * 6)));
-        transform: translateX(calc((200px * 6)));
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
     }
     100% {
-        -webkit-transform: translateX(calc((-200px * 6)));
-        transform: translateX(calc((-200px * 6)));
+        -webkit-transform: translateX(calc(-200px * 11 - 30px * 11));
+        transform: translateX(calc(-200px * 11 - 30px * 11)); 
     }
 }
 @keyframes translateNavOpen {
@@ -407,7 +407,8 @@ li{
 }
 .companys{
     margin-bottom: 60px;
-    width: 100%;
+    width: 80%;
+    margin: 0 auto 60px auto;
     height: fit-content;
     box-sizing: border-box;
     overflow: hidden;
@@ -427,10 +428,10 @@ li{
     display: flex;
     overflow: hidden;
     box-sizing: border-box;
-    animation: scroll2 30s linear infinite;
-    -webkit-animation: scroll2 30s linear infinite;
-    width: calc(200px * 6);
-    min-width: calc(200px * 6);
+    animation: scroll2 60s linear infinite;
+    -webkit-animation: scroll2 60s linear infinite;
+    width: calc(200px * 22);
+    min-width: calc(200px * 22); 
     gap: 30px;
 }
 .img-slide{
@@ -448,16 +449,21 @@ li{
     position: relative;
     bottom: 0;
     left: 0;
+    padding-top: 5px;
     display: flex;
     flex-flow: wrap row;
     justify-content: space-around;
     align-items: center;
+    gap: 30px;
 }
 .first-footer{
     margin-top: 10px;
 }
-.first-footer img{
-    width: clamp(340px,50vw,440px);
+.first-footer img:nth-child(1){
+    width: clamp(240px,50vw,340px);
+}
+.first-footer img:nth-child(2){
+    width: clamp(140px,50vw,240px);
 }
 .first-footer, .second-footer{
     overflow: hidden;
@@ -481,6 +487,7 @@ li{
     font-family: jet;
 }
 .second-footer h2{
+    font-size: 18px;
     text-align: center;
     color: var(--w);
     font-weight: 300;
@@ -492,7 +499,7 @@ li{
     align-items: center;
 }
 .social-red img{
-    width: 40px;
+    width: 35px;
     margin-right: 30px;
     object-fit: contain;
     border-radius: 100%;
@@ -500,9 +507,11 @@ li{
     
 }
 .social-red p{
+    font-size: 15px;
     color: var(--w);
     text-decoration: underline;
     text-decoration-color: var(--w);
+    margin: 10px 0;
 }
 @media (max-width: 800px){
     .inside-linksNav{
