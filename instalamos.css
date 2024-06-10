@@ -20,6 +20,22 @@
         transform: translateX(calc((-200px * 6)));
     }
 }
+@keyframes translateNavOpen {
+    0%{
+        transform: translateX(-300px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+@keyframes translateNavClose {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-400px);
+    }
+}
 body{
     box-sizing: border-box;
     scroll-behavior: smooth;
@@ -88,6 +104,32 @@ body{
     border-radius: 5px;
     padding: 5px;
     box-shadow: 0px 0px 15px 2px rgba(0, 0, 0, 0.50);
+}
+.navCel{
+    background-color: var(--b);
+    width: 300px;
+    height: 100%;
+    display: none;
+    position: fixed;
+    z-index: 300;
+    padding: 15px 0 0 10px;
+}
+.imgNav img{
+    width: 40px;
+    cursor: pointer;
+}
+.menu ul{
+    margin: 0;
+    margin-top: -20px;
+}
+.menu  li a{
+    display: inline-block;
+    position: relative;
+    padding-bottom: 0.25rem;
+    color: var(--w);
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
 }
 li{
     margin: 30px 0;
@@ -181,6 +223,11 @@ li{
     grid-template-areas: "Description Description"
                          "Mision Vision";
 }
+.titleBussines{
+    margin: 60px 0;
+    width: 100%;
+    text-align: center;
+}
 .BoxDetails{
     text-align: center;
     padding: 18px 40px;
@@ -217,15 +264,16 @@ li{
     justify-content: center;
    
 }
+
 .bussines-services .title{
     width: 100%;
-    margin-bottom: 30px;
+    margin-top: 50px;
     grid-column-start: title;
     grid-column-end: title;
     text-align: center;
 }
 .BoxDetails2{
-    width: clamp( 380px,60vw,580px);
+    width: clamp(350px,50vw,580px);
     overflow: hidden;
     box-sizing: border-box;
     padding: 18px 20px;
@@ -240,11 +288,11 @@ li{
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    margin-top: 120px;
+    margin-top: 80px;
 }
 .title2{
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
     width: 100%;
 }
 .boxSlider{
@@ -257,7 +305,7 @@ li{
     margin: 20px 0;
 }
 .job-description{
-    width: 600px;
+    width: clamp(350px,50vw,550px);
     border-radius: 10px;
     box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.25);
 }
@@ -266,8 +314,8 @@ li{
 }
 .slider{
     grid-column-start: title;
-    width: clamp(250px,50vw,520px);
-    height: clamp(250px,50vw,400px);
+    width: clamp(350px,50vw,520px);
+    height: clamp(400px,50vw,400px);
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.40);
@@ -289,8 +337,8 @@ li{
     
 }
 .st img{
-    width: clamp(250px,50vw,520px);
-    height: clamp(250px,50vw,400px);
+    width: clamp(350px,50vw,520px);
+    height: clamp(400px,50vw,400px);
     object-fit: contain;
 }
 
@@ -357,11 +405,11 @@ li{
     height: fit-content;
     box-sizing: border-box;
     overflow: hidden;
-    padding: 20px 40px;
+    padding: 20px 10px;
 }
 .Logo-bussines-slide{
     display: flex;
-    width: 78%;
+    width: 100%;
     height: auto;
     margin: 0 auto;
     overflow: hidden;
