@@ -140,6 +140,12 @@ li{
     gap: 10px;
     justify-content: center;
 }
+.inside-linksNav{
+    align-items: end;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
 .icon-red{
     object-fit: cover;
     width: clamp(30px, 8vw,40px);
@@ -499,6 +505,9 @@ li{
     text-decoration-color: var(--w);
 }
 @media (max-width: 800px){
+    .inside-linksNav{
+        height: 68%;
+    }
     .bussines-description{
         width: 100%;
         padding: 0;
@@ -523,6 +532,9 @@ li{
     }
 }
 @media (max-width: 600px){
+    .inside-linksNav{
+        height: 62%;
+    }
     .Background-image{
        display: none;
     }
