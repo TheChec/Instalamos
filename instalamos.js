@@ -1,81 +1,51 @@
-const navBar = document.getElementById('Navbar');
 window.sr = ScrollReveal();
-//Efecto de la barra de navegación
-
-
-const LoadNav = (entradas, observer) => {
-
-
-    entradas.forEach((entrada) => {
-        if(entrada.isIntersecting){
-            entrada.target.classList.remove('visible');
-        }else{
-            entrada.target.classList.add('visible');
-        }
-    })
-}
-
-
-const observer = new IntersectionObserver( LoadNav, {
-    root: null, //Viewport 
-    rootMargin: '-150px', //Agregarle margenes al viewport
-    threshold: 0.6,
-});
-observer.observe(navBar);
-
 
 //Efecto de los divs contenedor de la información basica
 
 sr.reveal('.description1', {
-    duration:3000,
+    duration:2000,
     origin: 'left',
-    distance: '100px'
+    distance: '100px',
 });
 sr.reveal('.description2', {
-    duration:4000,
+    duration:2000,
     origin: 'left',
-    distance: '200px'
+    distance: '200px',
 });
 sr.reveal('.description3', {
-    duration:4000,
+    duration:2000,
     origin: 'left',
-    distance: '200px'
+    distance: '200px',
 });
 sr.reveal('.title', {
     duration:2000,
     origin: 'left',
-    distance: '200px'
+    distance: '200px',
 });
 sr.reveal('.BoxDetails2', {
-    duration:3000,
+    duration:2000,
     origin: 'left',
-    distance: '200px'
+    distance: '200px',
 });
 sr.reveal('.slider', {
-    duration:3000,
+    duration:2000,
     origin: 'left',
-    distance: '200px'
+    distance: '200px',
 });
 sr.reveal('.title2', {
     duration:2000,
     origin: 'left',
-    distance: '200px'
+    distance: '200px',
 });
 sr.reveal('.job-description', {
-    duration:3000,
+    duration:2000,
     origin: 'left',
-    distance: '200px'
+    distance: '200px',
 });
 sr.reveal('.companys', {
-    duration:3000,
+    duration:2000,
     origin: 'left',
-    distance: '200px'
-});
-
-sr.reveal('.footer', {
-    duration:1000,
-    origin: 'bottom',
-    distance: '200px'
+    distance: '200px',
 });
 
 
