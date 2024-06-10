@@ -50,15 +50,26 @@ sr.reveal('.companys', {
 
 
 //Slider
+document.addEventListener('DOMContentLoaded', function() {
+    var carousels = document.querySelectorAll('.boxSlider');
 
-var counter=1;
-setInterval(function(){
-    document.getElementById('radio' + counter).checked=true;
-    counter++;
-    if(counter > 4){
-        counter = 1;
-    }
-},5000);
+    carousels.forEach(function(carousel, index) {
+        var counter = 1;
+        setInterval(function() {
+            var currentIndex = index + 1; // index for carousel starting from 1
+            var radioId = 'radio' + counter + '-' + currentIndex;
+            var radioButton = carousel.querySelector('#' + radioId);
+            if (radioButton) {
+                radioButton.checked = true;
+            }
+            counter++;
+            if (counter > 5) {
+                counter = 1;
+            }
+        }, 5000);
+    });
+});
+
 
 //Scroll-behavior, por problemas de compatibilidad
 
