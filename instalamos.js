@@ -108,6 +108,6 @@ function openNav(){
         setTimeout(() => {
             nav.style.display = 'none'
             contadorNav = 0;
-        }, 600)
+        }, 500)
     }
 }
