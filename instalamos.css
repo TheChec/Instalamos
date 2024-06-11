@@ -428,6 +428,7 @@ li{
     display: flex;
     overflow: hidden;
     box-sizing: border-box;
+    
     animation: scroll2 60s linear infinite;
     -webkit-animation: scroll2 60s linear infinite;
     width: calc(200px * 22);
