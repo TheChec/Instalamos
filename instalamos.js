@@ -98,15 +98,18 @@ var contadorNav = 0;
 
 function openNav(){
     let nav = document.getElementById('navCel');
+    let allContent = document.getElementById('divNavCel')
     if(contadorNav == 0){
         nav.style.display = 'flex'
         nav.style.animation = 'translateNavOpen .6s ease'
+        allContent.style.display = 'block'
         contadorNav = 1;
     }else{
         nav.style.animation = 'translateNavClose .6s ease'
 
         setTimeout(() => {
             nav.style.display = 'none'
+            allContent.style.display = 'none'
             contadorNav = 0;
         }, 500)
     }
