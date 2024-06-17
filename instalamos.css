@@ -301,7 +301,6 @@ li{
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    margin-top: 80px;
 }
 .title2{
     text-align: center;
